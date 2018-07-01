@@ -15,6 +15,7 @@ export class FilmsComponent implements OnInit {
   sortTypeLast: boolean = false;
   douloud: string = "Загрузить еще";
   inputFilm: string;
+  newList: Array<object>;
 
   constructor(public filmsService: FilmService) {
   }
@@ -32,6 +33,7 @@ export class FilmsComponent implements OnInit {
     this.numberFilm--;
   }
   sortFilms(sortType: boolean) {
+
     if (!(sortType === this.sortTypeLast)) {
       this.paging = 6;
     }
